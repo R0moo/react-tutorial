@@ -7,6 +7,8 @@ import Paragrafo from './Paragrafo.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Paragrafo />
+    <Paragrafo nome="Rafael" />
+    <Paragrafo nome="Romos" />
+    <Paragrafo nome="LiroLiro" />
   </StrictMode>,
 )
