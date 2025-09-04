@@ -1,20 +1,23 @@
+// src/CaixaTexto.jsx
 import { useState } from 'react'
 
-const CaixaTexto = (props) => {
+const CaixaTexto = () => {
+    const [texto, setTexto] = useState('')
 
-    const [texto, setTexto] = useState('');
-
-    const gerenciaTexto = (e) => {
-        setTexto(e.target.value)
+    const gerenciaTexto = (event) => {
+        setTexto(event.target.value)
     }
 
     return (
         <div>
             <h3>Input</h3>
-            <input type="text" value={texto} onChange={(e) => setTexto(e.target.value)}/>
+
+            <input type="text" value={texto} onInput={gerenciaTexto} />
+
             <p>Você digitou: {texto}</p>
-            <hr />
-        </div>)
+        </div>
+    )
+
 }
 
-export default Paragrafo
+export default CaixaTexto
